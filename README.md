@@ -10,17 +10,28 @@ As per FreePBX about MySQL/MariaDB configuration: "The prompt will ask you for y
 P.S P.S.
 You may want to make FreePBX start automatically via Systemd startup script. For that just create text file /etc/systemd/system/freepbx.service and put below contents to it: 
 [Unit]
+
 Description=FreePBX VoIP Server
+
 After=mariadb.service
+
+
  
 [Service]
+
 Type=oneshot
+
 RemainAfterExit=yes
+
 ExecStart=/usr/sbin/fwconsole start -q
+
 ExecStop=/usr/sbin/fwconsole stop -q
+
+
  
 [Install]
 WantedBy=multi-user.target
+
 
 Then run following commands:
 #systemctl enable freepbx.service
