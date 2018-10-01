@@ -46,7 +46,7 @@ pear install Console_Getopt
 echo "Do you plan to use Google Voice?"
 select yn in "Yes" "No"; do
     case $yn in
-            Yes ) cd /usr/src; wget https://github.com/meduketto/iksemel/archive/master.zip -O iksemel-master.zip; unzip iksemel-master.zip; rm -f iksemel-master.zip; cd iksemel-master; ./autogen.sh; ./configure; make; make install; break;
+            Yes ) cd /usr/src; wget https://github.com/meduketto/iksemel/archive/master.zip -O iksemel-master.zip; unzip iksemel-master.zip; rm -f iksemel-master.zip; cd iksemel-master; ./autogen.sh; ./configure; make; make install; break;;
 			No ) break;;
     esac
 done
